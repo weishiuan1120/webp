@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+        h2{
+        text-align: left;
+        font-size: 40px;
+        color: #FEC007;
+    }
+    </style>
+</head> 
+<body>
+<h1></h1>
+<h2>GAME START</h2>
+<h3></h3>
+<script type="text/javascript">
+    var h1 = document.querySelector('h1');
+    var h2 = document.querySelector('h2');
+    var h3 = document.querySelector('h3');
+   var s="";
+   var s1="";
+   var str="";
+   function showzm(){
+        
+        for(var i=1;i<=7;i++){
+        zmcode = 65+Math.floor(Math.random()*26);
+        s+= String.fromCharCode(zmcode);
+    } 
+   
+    h1.innerHTML=s;
+    
+}
+function a(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s+=String.fromCharCode(zmcode);
+         
+        h1.innerHTML=s;
+    }
+   function generate(){
+    setInterval(a,400)
+   }
+   window.addEventListener("load",showzm);
+   window.addEventListener("load",generate);
+
+function logkey(){
+ var h1 = document.querySelector('h1');
+asc=event.keyCode;
+key=String.fromCharCode(asc);
+
+s=s.substring(0,s.length-1)
+}
+   document.addEventListener("keydown",logkey);
+</script>
+</body>
+</html>

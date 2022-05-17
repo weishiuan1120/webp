@@ -1,0 +1,126 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Exo+2:wght@100&family=Lobster&family=Roboto+Mono:wght@300&family=Rubik+Bubbles&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+    <style>
+
+h1 {
+    font-family:'Exo 2', sans-serif;
+    font-size: 40px;
+}
+h2{
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 40px;
+}
+h3{
+    font-family:'Roboto Mono', monospace;
+    font-size: 40px;
+}
+h4{
+    font-family:'Rubik Wet Paint', cursive;
+    font-size: 40px;
+}
+h5{
+    font-family:'Exo 2', sans-serif;
+    font-size: 40px;
+}
+h6{
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 40px;
+}
+</style>
+</head>
+<body>
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+<script>
+       var s1="";
+       var s2="";
+       var s3="";
+       var s4="";
+       var s5="";
+       var s6="";
+    var h1 = document.querySelector('h1');
+    var h2 = document.querySelector('h2');
+    var h3 = document.querySelector('h3');
+    var h4 = document.querySelector('h4');
+    var h5 = document.querySelector('h5');
+    var h6 = document.querySelector('h6');
+    function a1(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s1+=String.fromCharCode(zmcode);
+         
+        h1.innerHTML=s1;
+    }
+
+   function generate1(){
+    setInterval(a1,400)
+   }
+   window.addEventListener("load",generate1);
+   
+   
+   
+   function a2(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s2+=String.fromCharCode(zmcode);
+         
+        h2.innerHTML=s2;
+    }
+   function generate2(){
+    setInterval(a2,400)
+   }
+   window.addEventListener("load",generate2);
+
+   function a3(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s3+=String.fromCharCode(zmcode);
+         
+        h3.innerHTML=s3;
+    }
+   function generate3(){
+    setInterval(a3,400)
+   }
+   window.addEventListener("load",generate3);
+
+   function a4(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s4+=String.fromCharCode(zmcode);
+         
+        h4.innerHTML=s4;
+    }
+   function generate4(){
+    setInterval(a4,400)
+   }
+   window.addEventListener("load",generate4);
+
+   function a5(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s5+=String.fromCharCode(zmcode);
+         
+        h5.innerHTML=s5;
+    }
+   function generate5(){
+    setInterval(a5,400)
+   }
+   window.addEventListener("load",generate5);
+
+   function a6(){
+        zmcode = 65+Math.floor(Math.random()*26);
+         s6+=String.fromCharCode(zmcode);
+         
+        h6.innerHTML=s6;
+    }
+   function generate6(){
+    setInterval(a6,400)
+   }
+   window.addEventListener("load",generate6);
+</script>
+<script>
+    
+    </script>
+</body>
+</html>

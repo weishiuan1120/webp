@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"> 
+</script>
+</head>
+<body>
+ <div id="contain"></div>
+<h1>metro_time<span>( 資料來源：政府資料開放平台 )</span></h1>
+<div id="contain"></div>
+<script>
+var cros = 'https://cors-anywhere.herokuapp.com/'
+var originUrl = "https://ptx.transportdata.tw/MOTC/v2/Rail/Metro/S2STravelTime/TYMC?%24top=30&%24format=JSON"
+var dataUrl = cros + originUrl
+var xhr = new XMLHttpRequest()
+xhr.open('GET',dataUrl, true)
+xhr.send()
+xhr.onload = function(){
+    var dataset = JSON.parse(this.responseText)
+    print(dataset)
+}
+function print(dataset){
+	dataset.forEach( (data, index) => {
+		let newCard = document.createElement("div")
+		newCard.className = "infoCard"
+		document.querySelector("#contain").appendChild(newCard)
+		let newCardInfo = `
+			<span class="order">${index + 1}</span>
+			<h3 class="name">${data.TravelTimes[index].FromStationName.Zh_tw}<br> ${data.TravelTimes[index].ToStationName.Zh_tw}<br>${data.TravelTimes[index].RunTime}</h3>
+		`
+		newCard.innerHTML = newCardInfo
+    })
+}
+</script>
+</body>
+</html>

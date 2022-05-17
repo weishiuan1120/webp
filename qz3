@@ -1,0 +1,24 @@
+<html> 
+<head> 
+  <title>My Document</title> 
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript"> 
+  str="";
+ function logkey(){
+ var h1 = document.querySelector('h1');
+asc=event.keyCode;
+key=String.fromCharCode(asc);
+str+=key;
+h1.innerHTML=str;
+}
+   document.addEventListener("keydown",logkey);
+    </script> 
+</head> 
+<body> 
+<h1></h1>
+   
+ 
+  
+</body> 
+</html>

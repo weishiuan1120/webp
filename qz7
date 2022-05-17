@@ -1,0 +1,16 @@
+<h1>臺北市即時雨量量資料</h1> 
+<div id="contain"></div>
+<script type="text/javascript" 
+src="https://cdnjs.cloudflare.com/ajax/
+libs/jquery/3.1.0/jquery.min.js"> 
+
+var msg ={
+"stationNo": "C0AD1",
+            "stationName": "八里",
+            "recTime": "202204271600",
+            "rain": 0
+}
+
+    $("#contain").html(); 
+    $("#contain").append("<h2>"+msg.stationName);        
+    $("#contain").append("<h3>"+msg.recTime); 

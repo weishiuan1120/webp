@@ -1,0 +1,20 @@
+html
+<ul id="myList">
+  <li >Item 01</li>
+  <li >Item 02</li>
+  <li >Item 03</li>
+</ul>
+
+js
+$(document).ready(function(){
+    $("#mylist").addEventListener('click', function(e) {
+  if ( e.target.tagName.toLowerCase() === 'li' ) {
+    console.log(e.target.textContent);
+  }
+}, false)
+});
+
+var newList = document.createElement('li');
+var textNode = document.createTextNode("hello cgu!");
+newList.appendChild(textNode);
+myList.appendChild(newList);

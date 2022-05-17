@@ -1,0 +1,11 @@
+////////html
+<h1 id="demo"></h1>
+////////js
+setInterval(myfun,1000);
+function myfun(){
+  var today = new Date();
+      var hh = today.getHours();
+      var mm = today.getMinutes();
+      var ss = today.getSeconds();
+      document.getElementById('demo').innerHTML ="cgu timer<br>"+hh + ":" + mm + ":" + ss;
+}
