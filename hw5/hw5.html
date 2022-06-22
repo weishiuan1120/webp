@@ -8,14 +8,12 @@
 <h1>metro_time<span>( 資料來源：政府資料開放平台 )</span></h1>
 <div id="contain"></div>
 <script>
-var cros = 'https://cors-anywhere.herokuapp.com/'
 var originUrl = "https://ptx.transportdata.tw/MOTC/v2/Rail/Metro/S2STravelTime/TYMC?%24top=30&%24format=JSON"
-var dataUrl = cros + originUrl
 var xhr = new XMLHttpRequest()
-xhr.open('GET',dataUrl, true)
+xhr.open('GET',originUrl, true)
 xhr.send()
 xhr.onload = function(){
-    var dataset = JSON.parse(this.responseText)
+    var dataset = JSON.parse(this.response)
     print(dataset)
 }
 function print(dataset){
